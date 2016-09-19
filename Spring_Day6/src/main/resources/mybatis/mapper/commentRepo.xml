@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.example.CommentRepo">
+ 	<insert id="insert" parameterType="comment">
+ 		<selectKey keyProperty="commentNo" resultType="int" order="AFTER">
+ 			SELECT SEQ_COMMENT.currval as commentNo FROM dual
+ 		</selectKey>
+ 		<!-- insert작업 처리 후 위의 값을 삽입한 dto에 다시 넣기 -->
+	 	INSERT INTO tcomment
+	 	VALUES(SEQ_COMMENT.nextval, #{userId}, #{content})
+ 	</insert>
+ 
+ </mapper>

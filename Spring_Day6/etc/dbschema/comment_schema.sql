@@ -17,4 +17,3 @@ alter table tcomment add constraint tcomment_tuser_fk
  foreign key(user_id) references tuser(user_id);
 
 create sequence SEQ_COMMENT;
-
