@@ -18,7 +18,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.comment.config.CommentConfig;
-import com.example.comment.dto.Comment;
 import com.example.comment.repo.CommentRepo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -52,13 +51,14 @@ public class CommentTest {
 		logger.trace("Session : {}",template);
 	}
 	
-	@Test
+	/*@Test
 	public void testInsert(){
 		Comment comment = new Comment(0, "hong", "test");
 		logger.trace("comment no. : {}", comment.getCommentNo());
 		int result = repo.insert(comment);
 		logger.trace("comment no. : {}", comment.getCommentNo());
 		assertThat(result, is(1));
-	}
+	}*/
+
 
 }

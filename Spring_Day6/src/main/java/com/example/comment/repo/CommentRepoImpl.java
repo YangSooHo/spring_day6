@@ -14,8 +14,8 @@ public class CommentRepoImpl implements CommentRepo {
 	
 	private final String COMMENT_NS = "com.example.CommentRepo.";
 	
-	public int insert(Comment comment) {
-		String stmt = COMMENT_NS + "insert";
+	public int addComment(Comment comment) {
+		String stmt = COMMENT_NS + "addComment";
 		return session.insert(stmt, comment);
 	}
 }

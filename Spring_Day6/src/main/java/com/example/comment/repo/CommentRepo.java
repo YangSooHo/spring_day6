@@ -4,5 +4,5 @@ import com.example.comment.dto.Comment;
 
 public interface CommentRepo {
 
-	public int insert(Comment comment);
+	public int addComment(Comment comment);
 }
